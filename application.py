@@ -6,7 +6,7 @@ application = Flask(__name__)
 def calendar():
     return render_template("index.html")
 
-@app.route('/data')
+@application.route('/data')
 def return_data():
     start_date = request.args.get('start', '')
     end_date = request.args.get('end', '')
